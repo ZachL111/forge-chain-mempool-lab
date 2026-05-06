@@ -1,0 +1,73 @@
+{
+  "repo": "forge-chain-mempool-lab",
+  "language": "C",
+  "category": "Blockchain tooling",
+  "goal": "Implement a C blockchain tooling project for mempool format conversion, using round-trip fixtures and lossless normalization checks.",
+  "review_model": {
+    "terms": [
+      "event finality",
+      "nonce pressure",
+      "settlement risk",
+      "proof depth"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "event finality",
+      "signal": 69,
+      "slack": 29,
+      "drag": 24,
+      "confidence": 87,
+      "score": 182,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "nonce pressure",
+      "signal": 62,
+      "slack": 51,
+      "drag": 17,
+      "confidence": 55,
+      "score": 179,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "settlement risk",
+      "signal": 63,
+      "slack": 35,
+      "drag": 23,
+      "confidence": 85,
+      "score": 177,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "proof depth",
+      "signal": 51,
+      "slack": 34,
+      "drag": 17,
+      "confidence": 67,
+      "score": 152,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "event finality",
+      "signal": 88,
+      "slack": 47,
+      "drag": 9,
+      "confidence": 63,
+      "score": 259,
+      "lane": "ship"
+    }
+  ]
+}
